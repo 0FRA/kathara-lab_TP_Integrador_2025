@@ -1,0 +1,13 @@
+source /root/.bashrc
+
+ip addr add 10.10.0.10/24 dev eth0
+ip link set eth0 up 
+
+
+#ip route add default via 10.10.0.1
+
+#dns
+echo "nameserver 8.8.8.8" > /etc/resolv.conf
+
+#proxy
+export http_proxy=http://10.10.0.1:3128

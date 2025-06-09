@@ -1,0 +1,11 @@
+# Interfaces
+
+ip addr add 190.7.231.40/24 dev eth0
+ip link set eth0 up
+
+
+ip addr add 10.10.0.100/24 dev eth1
+ip link set eth1 up
+
+
+ip route add 8.8.8.0/28 via 190.7.231.30

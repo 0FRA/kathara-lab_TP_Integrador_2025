@@ -1,0 +1,13 @@
+chmod 755 /etc
+chmod 755 /etc/bind
+
+ip addr add 8.8.8.8/28 dev eth0
+ip link set eth0 up
+
+ip addr add 190.7.231.30/28 dev eth0
+ip link set eth0 up
+
+
+ip route add default via 8.8.8.1
+
+
