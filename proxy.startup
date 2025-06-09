@@ -5,7 +5,6 @@ sed -i 's/\#http_access allow localnet/http_access allow all/' /etc/squid/squid.
 #rm -r /var/spool/squid/*
 #squid -z
 
-
 ip addr add 10.10.0.1/24 dev eth0
 ip link set eth0 up
 
@@ -13,28 +12,6 @@ ip route add default via 10.10.0.100
 
 echo "nameserver 8.8.8.8" > /etc/resolv.conf
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# DNS
-echo "nameserver 8.8.8.8" > /etc/resolv.conf
-
-
-# Iniciar proxy
 service squid restart
 
-# Escucha??
 netstat -tuln | grep :3128
