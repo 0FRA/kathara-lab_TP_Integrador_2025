@@ -1,0 +1,1 @@
+export KATHARA_TERMINAL="gnome-terminal -- bash -c"
